@@ -44,4 +44,9 @@ Folder: shared
 
 Create folders under app with the name of the page but instead of index.js the pages will be page.jsx
 
+Dynamic routing: create folder like [slug] and under that page.jsx
+
+If you use [...slug] any further subfile is available and gives no 404
+
+
 
