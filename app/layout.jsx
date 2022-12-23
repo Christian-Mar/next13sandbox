@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Navigation from './shared/Navbar';
+import WordGenerator from './shared/WordGenerator';
 
 export default function RootLayout({ children }) {
 	return (
@@ -8,6 +9,7 @@ export default function RootLayout({ children }) {
 			<body className='container'>
 				<Navigation />
 				{children}
+        <WordGenerator />
 			</body>
 		</html>
 	);

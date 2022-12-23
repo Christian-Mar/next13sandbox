@@ -48,5 +48,11 @@ Dynamic routing: create folder like [slug] and under that page.jsx
 
 If you use [...slug] any further subfile is available and gives no 404
 
+Grouu pages as in the code with () -> (welcome)
+
+Components in used in the client, for example with a useEffect, need to get: "use client". All the rest is executed on the server. 
+
+
+
 
 
