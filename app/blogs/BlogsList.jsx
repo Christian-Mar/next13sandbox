@@ -1,30 +1,25 @@
 'use client';
 
 import useSWR from 'swr';
+import Link from 'next/link';
 
-/* async function getProducts() {
-	//getStaticProps - for serverSideProps add { cache: "no-store"}
-	
-  const res = await fetch(
-		'https://product-app-101-server.vercel.app/api/products',
-		{ cache: 'no-store' }
+const fetcher = path =>
+	fetch(`https://product-app-101-server.vercel.app/${path}`).then(res =>
+		res.json()
 	);
-	return res.json();
-}
-  */
 
-const fetcher = (path) => fetch(`https://product-app-101-server.vercel.app/${path}`).then(res => res.json());
-
-const BlogList = () => {
+export default function BlogList() {
 	const blogs = useSWR('api/products', fetcher);
 
 	return (
 		<div>
 			{blogs.data?.map(blog => (
-				<div key={blog.name}>{blog.name}</div>
+				<div key={blog.name}>
+					<Link href={`/blogs/${blog.name.replace(/\s+/g, '-').toLowerCase()}`}>
+						{blog.name}
+					</Link>
+				</div>
 			))}
 		</div>
 	);
-};
-
-export default BlogList;
+}
