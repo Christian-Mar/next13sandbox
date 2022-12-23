@@ -36,3 +36,12 @@ head.js and layout.js will be created automatically -> change to jsx
 
 in layout.jsx import globals.css
 
+### Creation of component -> Navbar
+
+Folder: shared 
+
+## New pages
+
+Create folders under app with the name of the page but instead of index.js the pages will be page.jsx
+
+
