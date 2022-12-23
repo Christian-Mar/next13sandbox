@@ -3,10 +3,12 @@ import { use } from 'react';
 // https://vived.io/new-hook-is-coming-to-react-frontend-weekly-vol-109/
 
 async function getProducts() {
-
-  //getStaticProps
-  const res = await fetch("https://product-app-101-server.vercel.app/api/products");
-  return res.json();
+	//getStaticProps - for serverSideProps add { cache: "no-store"}
+	const res = await fetch(
+		'https://product-app-101-server.vercel.app/api/products',
+		{ cache: 'no-store' }
+	);
+	return res.json();
 }
 
 const ProductsPage = () => {
