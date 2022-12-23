@@ -10,3 +10,12 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.container {
+  max-width: 800px;
+  padding: 200px 50px;
+  margin: auto;
+}
+
+.page {
+  padding: 20px;
+}

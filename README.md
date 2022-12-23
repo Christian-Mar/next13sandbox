@@ -18,3 +18,21 @@ module.exports = nextConfig
 
 -> new npm run dev -> you can use the app folder!
 
+## First page
+
+page.jsx
+
+const Page = () => {
+  return (
+    <div>
+      <h1>Hello world</h1>
+    </div>
+  )
+}
+
+export default Page
+
+head.js and layout.js will be created automatically -> change to jsx
+
+in layout.jsx import globals.css
+
